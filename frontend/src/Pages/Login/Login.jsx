@@ -6,7 +6,13 @@ import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import PersonIcon from '@mui/icons-material/Person';
+import { useState } from "react";
 function Login() {
+  const [hidden, setHidden] = useState('hidden');
+  const changeHandler = () =>{
+    setHidden(prev => prev === "hidden" ? "visible" : "hidden")
+  }
   return (
     <>
       <div className="bg-[#010205] text-white w-full h-screen">
@@ -55,7 +61,7 @@ function Login() {
             </div>
           </div>
 
-          <div className="bg-[#0b0c10] text-white px-15 py-10 mt-4 border border-[#222527] rounded-lg">
+          <div className="bg-[#0b0c10] text-white px-15 py-2 mt-2 border border-[#222527] rounded-lg">
             <div className="">
               <div className="">
                 <h1 className="text-4xl pb-3 font-bold">
@@ -64,6 +70,18 @@ function Login() {
                 <p className="text-lg pb-8">Login to continue watching.</p>
               </div>
               <form action="">
+                <div className={hidden}>
+                  <label htmlFor="name">Full Name</label>
+                  <div className="flex justify-start align-center gap-2 border border-[#a0a0a3] rounded-sm w-full py-2 px-2 my-1 text-[#a0a0a3]">
+                    <PersonIcon />
+                    <input
+                      type="text"
+                      placeholder="Enter your full name"
+                      className="outline-none"
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label htmlFor="email">Email</label>
                   <div className="flex justify-start align-center gap-2 border border-[#a0a0a3] rounded-sm w-full py-2 px-2  my-2 text-[#a0a0a3]">
@@ -98,7 +116,7 @@ function Login() {
                 </div>
 
                 <div className="flex justify-center align-center py-2 text-[#c9c8ca]">
-                  <p>Don't have an account? <a href="" className="text-[#fab612]">Sign up</a></p>
+                  <p>Don't have an account? <span onClick={changeHandler} className="text-[#fab612] cursor-pointer">Sign up</span></p>
                 </div>
               </form>
             </div>
