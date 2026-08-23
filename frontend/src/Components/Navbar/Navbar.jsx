@@ -1,42 +1,54 @@
 import React from "react";
 import logo from "../../assets/Logo.png";
 import SearchIcon from "@mui/icons-material/Search";
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import NotificationsIcon from "@mui/icons-material/Notifications";
 function Navbar() {
   return (
     <>
-      <div className="px-20">
-        <div className="flex justify-between align-center py-4">
-          <div className="flex justify-start align-center gap-10">
-            <div className="flex justify-start align-center gap-2 py-2">
-              <img src={logo} alt="" className="w-10 rounded-full" />
-              <h2 className="font-bold">
+      <div className="px-20 bg-[#02070c] text-[#faf9fa]">
+        <div className="flex justify-between align-center w-full py-2 ">
+          <div className="flex justify-start align-center gap-10 py-2">
+            <div className="flex align-center">
+              <img src={logo} alt="" className="w-8 rounded-full" />
+              <h2 className="font-bold text-lg">
                 Ethio<span>Movies</span>
               </h2>
             </div>
-            <div className="flex justify-center align-center gap-4">
-              <a href="">Home</a>
-              <a href="">Movies</a>
-              <a href="">Series</a>
-              <a href="">Categories</a>
-              <a href="">MyList</a>
-            </div>
-            <div className="flex justify-start align-center border border-[]  rounded-lg py-2 gap-2">
-              <SearchIcon />
-              <input
-                type="text"
-                placeholder="Search movies, series..."
-                className="outline-none"
-              />
+            <div className="">
+              <ul className="flex justify-center align-center gap-6">
+                <li>
+                  <a href="">Home</a>
+                </li>
+                <li>
+                  {" "}
+                  <a href="">Movies</a>
+                </li>
+                <li>
+                  <a href="">Series</a>
+                </li>
+                <li>
+                  <a href="">Categories</a>
+                </li>
+                <li>
+                  <a href="">MyList</a>
+                </li>
+
+                <li className="border border-[#282b2e] rounded-full">
+                    <SearchIcon />
+                <input
+                  type="text"
+                  placeholder="Search movies, series..."
+                  className="outline-none px-2  w-[300px] py-1"
+                />
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div className="flex justify-center align-center gap-2">
-            <NotificationsIcon/>
-            <div className="flex justify-center align-center gap-2 py-2">
-                <img src={logo} alt="" className="w-10 rounded-full" />
-                <p>Abebe</p>
-            </div>
+          <div className="flex align-center py-2">
+              <NotificationsIcon/>
+              <img src={logo} alt="" className="w-8 rounded-full" />
+              <p className="text-lg">Abebe</p>
           </div>
         </div>
       </div>
