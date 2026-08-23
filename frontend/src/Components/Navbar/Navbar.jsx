@@ -33,7 +33,7 @@ function Navbar() {
                   <a href="">MyList</a>
                 </li>
 
-                <li className="border border-[#282b2e] rounded-full">
+                <li className="border border-[#282b2e] rounded-full px-2">
                     <SearchIcon />
                 <input
                   type="text"
