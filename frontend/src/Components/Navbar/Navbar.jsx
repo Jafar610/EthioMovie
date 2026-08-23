@@ -11,7 +11,7 @@ function Navbar() {
             <div className="flex align-center">
               <img src={logo} alt="" className="w-8 rounded-full" />
               <h2 className="font-bold text-lg">
-                Ethio<span>Movies</span>
+                Ethio<span className="text-[#e4a726]">Movies</span>
               </h2>
             </div>
             <div className="">
