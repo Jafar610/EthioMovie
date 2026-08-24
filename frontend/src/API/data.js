@@ -35,8 +35,8 @@ const movies = [
     description: "Earth's mightiest heroes must come together...",
   },
   {
-    title: "Batman",
-    image: "https://www.addisgo.com/kana/social-thumb.php?vid=17081435b",
+    title: "Addis Jember",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxfNbAfEQWG7kSuhhfyD8jPJzREockW9wNEYxOlhsWjGQU7rzELrccDcM&s=10",
     description: "A dark knight rises to protect Gotham...",
   },
 ];
