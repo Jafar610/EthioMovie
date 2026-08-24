@@ -5,6 +5,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import PremiumCard from "../PremiumCard/PremiumCard";
 import logo from "../../assets/Logo.png"
+import GooglePlay from "../../assets/download.png"
+import AppleStore from "../../assets/apple-logo.png"
 function Footer() {
   return (
     <>
@@ -17,7 +19,10 @@ function Footer() {
                         <img src={logo} alt="" className='w-10 rounded-full' />
                         <h1 className='text-3xl font-bold'>Ethio<span className='text-[#f3b61f]'>Movie</span></h1>
                     </div>
-                    <div>
+                    <div className='py-2'>
+                        <h3 className='w-[200px] h-auto'>You home for the best Ethiopian movies and series, Watch, enjoy and celebrate our stories.</h3>
+                    </div>
+                    <div className='flex gap-3'>
                         <FacebookIcon/>
                         <InstagramIcon/>
                         <YouTubeIcon/>
@@ -25,40 +30,52 @@ function Footer() {
                     </div>
                 </div>
                 <div>
-                    <h2>Explore</h2>
-                    <p>Home</p>
-                    <p>Movie</p>
-                    <p>Series</p>
-                    <p>Categories</p>
-                    <p>New release</p>
-                    <p>Top Rated</p>
-                    <p>Comming Soon</p>
+                    <h2 className='text-[#f3b61f] text-xl font-bold py-2'>Explore</h2>
+                    <p className='pb-2'>Home</p>
+                    <p className='pb-2'>Movie</p>
+                    <p className='pb-2'>Series</p>
+                    <p className='pb-2'>Categories</p>
+                    <p className='pb-2'>New release</p>
+                    <p className='pb-2'>Top Rated</p>
+                    <p className='pb-2'>Comming Soon</p>
                 </div>
                 <div>
-                    <h2>My Account</h2>
-                    <p>My List</p>
-                    <p>Watch Letter</p>
-                    <p>History</p>
-                    <p>Subscriptions</p>
-                    <p>Profile Settings</p>
+                    <h2 className='text-[#f3b61f] text-xl font-bold py-2'>My Account</h2>
+                    <p className='pb-2'>My List</p>
+                    <p className='pb-2'>Watch Letter</p>
+                    <p className='pb-2'>History</p>
+                    <p className='pb-2'>Subscriptions</p>
+                    <p className='pb-2'>Profile Settings</p>
                 </div>
                 <div>
-                    <h2>Support</h2>
-                    <p>Help Center</p>
-                    <p>Contact Us</p>
-                    <p>FAQ</p>
-                    <p>Terms of Usage</p>
-                    <p>Privacy Policy</p>
+                    <h2 className='text-[#f3b61f] text-xl font-bold py-2'>Support</h2>
+                    <p className='pb-2'>Help Center</p>
+                    <p className='pb-2'>Contact Us</p>
+                    <p className='pb-2'>FAQ</p>
+                    <p className='pb-2'>Terms of Usage</p>
+                    <p className='pb-2'>Privacy Policy</p>
                 </div>
                 <div>
-                    <h2>Download App</h2>
-                    <p>Watch EthioMovie on your mobile device</p>
-                    
+                    <h2 className='text-[#f3b61f] text-xl font-bold py-2'>Download App</h2>
+                    <p className='pb-2'>Watch EthioMovie on <br /> your mobile device.</p>
+                    <div className='flex justify-center align-center  gap-2 border border-gray-400 rounded-lg py-2 px-4 my-2'>
+                        <img src={GooglePlay} alt="" className='w-8 h-8'/>
+                        <div>
+                            <p className='text-xs'>GET IT ON</p>
+                            <h4 className='font-bold'>Google Play</h4>
+                        </div>
+                    </div>
+
+                    <div className='flex justify-center align-center  gap-2 border border-gray-400 rounded-lg py-2 px-4 my-4'>
+                        <img src={AppleStore} alt="" className='w-8 h-8'/>
+                        <div>
+                            <p className='text-xs'>Download on the</p>
+                            <h4 className='font-bold'>Apple Store</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div>
-
             </div>
         </div>
      </div>
