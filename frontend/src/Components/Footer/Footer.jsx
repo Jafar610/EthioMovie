@@ -1,14 +1,28 @@
 import React from 'react'
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import PremiumCard from "../PremiumCard/PremiumCard";
+import logo from "../../assets/Logo.png"
 function Footer() {
   return (
     <>
-     <div>
+     <div className='w-full h-screen bg-[#0b0f13] p-4'>
+        <PremiumCard/>
         <div>
-            <div>
+            <div className='flex justify-between align-center mt-10 text-[#d2d1d2] px-20'>
                 <div>
-                    <img src="" alt="" />
-                    <h1>Ethio<span>Movie</span></h1>
+                    <div className='flex  align-center py-2 gap-4'>
+                        <img src={logo} alt="" className='w-10 rounded-full' />
+                        <h1 className='text-3xl font-bold'>Ethio<span className='text-[#f3b61f]'>Movie</span></h1>
+                    </div>
+                    <div>
+                        <FacebookIcon/>
+                        <InstagramIcon/>
+                        <YouTubeIcon/>
+                        <TelegramIcon/>
+                    </div>
                 </div>
                 <div>
                     <h2>Explore</h2>
