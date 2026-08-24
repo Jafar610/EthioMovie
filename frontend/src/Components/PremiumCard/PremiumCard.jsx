@@ -28,7 +28,7 @@ function PremiumCard() {
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-4">
             <Crown size={80} color="#f3b126"/>
             <h2 className="text-xl font-bold text-[#f3b126]">Go to premium today!</h2>
             <button className="border border-[#f3b126] rounded-lg px-6 py-2 bg-[#f3b126] text-lg text-bold my-2 ">Start your free trial!</button>
