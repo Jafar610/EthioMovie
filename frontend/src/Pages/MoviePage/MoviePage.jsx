@@ -1,61 +1,118 @@
-import React from 'react'
-import TuneIcon from '@mui/icons-material/Tune';
-import movies from '../../API/data';
-import StarIcon from '@mui/icons-material/Star';
+import React, { useState } from "react";
+import TuneIcon from "@mui/icons-material/Tune";
+import movies from "../../API/data";
+import StarIcon from "@mui/icons-material/Star";
+import RP from "react-paginate";
+
+// Fix for Vite CJS interop (react-paginate exports an object)
+const ReactPaginate = RP.default ?? RP;
+
 function MoviePage() {
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemPerPage = 5;
+  const endOffset = itemOffset + itemPerPage;
+  const currentMovies = movies.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(movies.length / itemPerPage);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemPerPage) % movies.length;
+    setItemOffset(newOffset);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
-     <div className='px-20'>
-        <div>
-            <h1>Movies</h1>
-            <div className='flex justify-center align-center gap-10'>
-                <select name="" id="">
-                    <option value="">All Genres</option>
-                </select>
+      <div className="px-20 bg-[#0b0d11] text-white w-full min-h-screen">
+        <div className="py-3">
+          <h1 className="text-4xl font-bold text-[#ecad2a]">Movies</h1>
 
-                <select name="" id="">
-                    <option value="">All Years</option>
-                </select>
+          <div className="flex justify-center items-center gap-10 pb-4">
+            <select
+              className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#b6b1b6]"
+            >
+              <option value="">All Genres</option>
+            </select>
 
-                <select name="" id="">
-                    <option value="">Popular</option>
-                </select>
+            <select
+              className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#b6b1b6]"
+            >
+              <option value="">All Years</option>
+            </select>
 
-                <div>
-                 <TuneIcon/>
-                 <button>Filters</button>
-                </div>
+            <select
+              className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#b6b1b6]"
+            >
+              <option value="">Popular</option>
+            </select>
+
+            <div className="border border-[#232328] px-6 py-2 rounded-lg outline-none hover:bg-[#fff] hover:text-[#000] text-[#b6b1b6] flex items-center gap-2">
+              <TuneIcon />
+              <button type="button">Filters</button>
             </div>
+          </div>
 
-            <div>
-                <h4>Showing 1-20 of 320 Movies.</h4>
-                <div className='grid grid-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
-                    {
-                        movies.map((movie, index)=>(
-                            <div key={index} className='rounded-xl overflow-hidden hover:scale-104 relative '>
-                                <img src={movie.image} alt="" className='rounded-xl' />
+          <div className="py-2">
+            <h4 className="text-[#b6b1b6] text-lg pb-4 font-semibold">
+              Showing {itemOffset + 1}–{Math.min(endOffset, movies.length)} of{" "}
+              {movies.length} Movies.
+            </h4>
 
-                                <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent'></div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {currentMovies.map((movie, index) => (
+                <div
+                  key={movie.id ?? index}
+                  className="rounded-xl overflow-hidden hover:scale-105 relative"
+                >
+                  <img
+                    src={movie.image}
+                    alt={movie.title || "Movie poster"}
+                    className="rounded-xl w-full"
+                  />
 
-                                <div className='absolute bottom-0 w-full px-2 py-2'>
-                                    <h2 className='text-lg font-bold text-white'>{movie.title}</h2>
-                                <div className='flex justify-between align-center text-gray-300'>
-                                    <div><p>2022.Drama</p></div>
-                                    <div className='flex text-yellow-500'>
-                                        <StarIcon/>
-                                        <p>4.5</p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        ))
-                    }
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+                  <div className="absolute bottom-0 w-full px-2 py-2">
+                    <h2 className="text-lg font-bold text-white">
+                      {movie.title}
+                    </h2>
+                    <div className="flex justify-between items-center text-gray-300">
+                      <div>
+                        <p>
+                          {movie.year || "2022"}.{movie.genre || "Drama"}
+                        </p>
+                      </div>
+                      <div className="flex items-center text-yellow-500">
+                        <StarIcon fontSize="small" />
+                        <p>{movie.rating || "4.5"}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              ))}
             </div>
+          </div>
+
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="Next"
+            previousLabel="Prev"
+            onPageChange={handlePageClick}
+            pageCount={pageCount}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={1}
+            forcePage={itemOffset / itemPerPage}
+            containerClassName="flex justify-center gap-3 mt-8"
+            pageClassName="px-3 py-1 bg-[#1a1d24] text-white rounded-lg hover:bg-[#ecad2a] hover:text-black transition cursor-pointer"
+            activeClassName="!bg-[#ecad2a] !text-black"
+            previousClassName="px-3 py-1 bg-[#1a1d24] rounded-lg cursor-pointer"
+            nextClassName="px-3 py-1 bg-[#1a1d24] rounded-lg cursor-pointer"
+            disabledClassName="opacity-40 cursor-not-allowed"
+            renderOnZeroPageCount={null}
+          />
         </div>
-     </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default MoviePage
+export default MoviePage;
