@@ -12,9 +12,9 @@ function PremiumCard() {
         }}
       >
       <div className="absolute top-0 right-0 bg-gradient-to-l from-black/90 via-black/50 to-transparent"></div>
-        <div className="flex justify-between align-center pt-8">
+        <div className="flex justify-between items-center pt-8">
           <div className="text-white">
-            <div className="flex align-center gap-4">
+            <div className="flex items-center gap-4">
               <img src={logo} alt="" className="w-20 rounded-full" />
               <h1 className="text-4xl font-bold py-4">
                 Ethio<span className="text-[#f3b126]">Movie</span>

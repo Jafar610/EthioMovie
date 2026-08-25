@@ -6,16 +6,16 @@ function Navbar() {
   return (
     <>
       <div className="px-20 bg-[#02070c] text-[#faf9fa]">
-        <div className="flex justify-between align-center w-full py-2 ">
-          <div className="flex justify-start align-center gap-10 py-2">
-            <div className="flex align-center">
+        <div className="flex justify-between items-center w-full py-2 ">
+          <div className="flex justify-start items-center gap-10 py-2">
+            <div className="flex items-center">
               <img src={logo} alt="" className="w-8 rounded-full" />
               <h2 className="font-bold text-lg">
                 Ethio<span className="text-[#e4a726]">Movies</span>
               </h2>
             </div>
             <div className="">
-              <ul className="flex justify-center align-center gap-6">
+              <ul className="flex justify-center items-center gap-6">
                 <li>
                   <a href="">Home</a>
                 </li>
@@ -45,7 +45,7 @@ function Navbar() {
             </div>
           </div>
 
-          <div className="flex align-center py-2">
+          <div className="flex items-center py-2">
               <NotificationsIcon/>
               <img src={logo} alt="" className="w-8 rounded-full" />
               <p className="text-lg">Abebe</p>

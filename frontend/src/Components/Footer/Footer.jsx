@@ -13,9 +13,9 @@ function Footer() {
      <div className='w-full h-screen bg-[#0b0f13] p-4'>
         <PremiumCard/>
         <div>
-            <div className='flex justify-between align-center mt-10 text-[#d2d1d2] px-20'>
+            <div className='flex justify-between items-center mt-10 text-[#d2d1d2] px-20'>
                 <div>
-                    <div className='flex  align-center py-2 gap-4'>
+                    <div className='flex  items-center py-2 gap-4'>
                         <img src={logo} alt="" className='w-10 rounded-full' />
                         <h1 className='text-3xl font-bold'>Ethio<span className='text-[#f3b61f]'>Movie</span></h1>
                     </div>
@@ -58,7 +58,7 @@ function Footer() {
                 <div>
                     <h2 className='text-[#f3b61f] text-xl font-bold py-2'>Download App</h2>
                     <p className='pb-2'>Watch EthioMovie on <br /> your mobile device.</p>
-                    <div className='flex justify-center align-center  gap-2 border border-gray-400 rounded-lg py-2 px-4 my-2'>
+                    <div className='flex justify-center items-center  gap-2 border border-gray-400 rounded-lg py-2 px-4 my-2'>
                         <img src={GooglePlay} alt="" className='w-8 h-8'/>
                         <div>
                             <p className='text-xs'>GET IT ON</p>
@@ -66,7 +66,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className='flex justify-center align-center  gap-2 border border-gray-400 rounded-lg py-2 px-4 my-4'>
+                    <div className='flex justify-center items-center  gap-2 border border-gray-400 rounded-lg py-2 px-4 my-4'>
                         <img src={AppleStore} alt="" className='w-8 h-8'/>
                         <div>
                             <p className='text-xs'>Download on the</p>
