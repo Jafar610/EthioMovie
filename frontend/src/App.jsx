@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import MoviePage from "./Pages/MoviePage/MoviePage";
 import Layout from "./Components/Layout/Layout";
+import Series from "./Pages/Series/Series";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route path="/" element={<Home />} />
+            <Route path="/series" element={<Series/>} />
             <Route path="/movie" element={<MoviePage />} />
             <Route path="/login" element={<Login/>} />
           </Route>

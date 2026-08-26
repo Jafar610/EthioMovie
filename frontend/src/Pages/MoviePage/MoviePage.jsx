@@ -4,7 +4,10 @@ import movies from "../../API/data";
 import StarIcon from "@mui/icons-material/Star";
 import RP from "react-paginate";
 
-// Fix for Vite CJS interop (react-paginate exports an object)
+import WidgetsIcon from "@mui/icons-material/Widgets";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+
 const ReactPaginate = RP.default ?? RP;
 
 function MoviePage() {
@@ -24,30 +27,35 @@ function MoviePage() {
     <>
       <div className="px-20 bg-[#0b0d11] text-white w-full min-h-screen">
         <div className="py-3">
-          <h1 className="text-4xl font-bold text-[#ecad2a]">Movies</h1>
+          <h1 className="text-4xl font-bold text-[#ecad2a] pb-4">Movies</h1>
 
-          <div className="flex justify-center items-center gap-10 pb-4">
-            <select
-              className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#b6b1b6]"
-            >
-              <option value="">All Genres</option>
-            </select>
+          <div className="flex justify-start items-center gap-10 pb-4">
+            <div className="flex gap-3 border border-[#232328] px-6 py-2 rounded-lg outline-none  text-[#ecad2a]">
+              <WidgetsIcon />
+              <select className="text-[#b6b1b6]">
+                <option value="">All Genres</option>
+              </select>
+            </div>
 
-            <select
-              className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#b6b1b6]"
-            >
-              <option value="">All Years</option>
-            </select>
+            <div className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#ecad2a] flex gap-3">
+              <DateRangeIcon />
+              <select className="text-[#b6b1b6]">
+                <option value="">All Years</option>
+              </select>
+            </div>
 
-            <select
-              className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#b6b1b6]"
-            >
-              <option value="">Popular</option>
-            </select>
+            <div className="border border-[#232328] px-6 py-2 rounded-lg outline-none text-[#ecad2a] flex gap-3">
+              <WhatshotIcon />
+              <select className="text-[#b6b1b6]">
+                <option value="">Popular</option>
+              </select>
+            </div>
 
-            <div className="border border-[#232328] px-6 py-2 rounded-lg outline-none hover:bg-[#fff] hover:text-[#000] text-[#b6b1b6] flex items-center gap-2">
+            <div className="border border-[#232328] text-[#ecad2a] px-6 py-2 rounded-lg outline-none hover:scale-105 flex items-center gap-2">
               <TuneIcon />
-              <button type="button">Filters</button>
+              <button type="button" className="text-[#b6b1b6]">
+                Filters
+              </button>
             </div>
           </div>
 
