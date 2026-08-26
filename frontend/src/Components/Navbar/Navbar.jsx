@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/Logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
@@ -17,20 +18,20 @@ function Navbar() {
             <div className="">
               <ul className="flex justify-center items-center gap-6">
                 <li>
-                  <a href="">Home</a>
+                  <Link to={'/'}>Home</Link>
                 </li>
                 <li>
                   {" "}
-                  <a href="">Movies</a>
+                  <Link to={'/movie'}>Movies</Link>
                 </li>
                 <li>
-                  <a href="">Series</a>
+                  <Link to={'/series'}>Series</Link>
                 </li>
                 <li>
-                  <a href="">Categories</a>
+                  <Link to={'/categories'}>Categories</Link>
                 </li>
                 <li>
-                  <a href="">MyList</a>
+                  <Link to={'/mylist'}>MyList</Link>
                 </li>
 
                 <li className="border border-[#282b2e] rounded-full px-2">

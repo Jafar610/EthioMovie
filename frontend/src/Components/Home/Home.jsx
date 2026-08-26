@@ -1,9 +1,15 @@
-import React from 'react'
+
+import SharedLayout from "../../Components/Layout/Layout";
+import Hero from "../Hero/Hero";
+import Movies from "../Movies/Movies"
 
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <Hero />
+      <Movies />
+    </>
+  );
 }
 
-export default Home
+export default Home;
