@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import movies from "../../API/series";
 import StarIcon from "@mui/icons-material/Star";
 import RP from "react-paginate";
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import AppsIcon from '@mui/icons-material/Apps';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const ReactPaginate = RP.default ?? RP;
 
@@ -26,15 +30,74 @@ function Mylist() {
             You saved movies and series. Access them anytime and anywhere.
           </p>
 
-          <div className="py-2 ">
-            <div></div>
+          <div className="py-2 flex  gap-10">
+            <div className="min-w-60 h-auto  ">
+              <div className="border rounded-lg px-6 py-4">
+                <div className="flex justify-between items-center py-2">
+                  <div className="flex gap-2">
+                    <BookmarkIcon/>
+                    <p>All Items</p>
+                  </div>
+                    <p>24</p>           
+                </div>
+
+                <div className="flex justify-between items-center py-2">
+                  <div className="flex gap-2">
+                    <AppsIcon/>
+                    <p>Movies</p>
+                  </div>
+                    <p>14</p>           
+                </div>
+
+                <div className="flex justify-between items-center py-2">
+                  <div className="flex gap-2">
+                    <LiveTvIcon/>
+                    <p>Series</p>
+                  </div>
+                    <p>10</p>           
+                </div>
+
+                <hr className="my-2 text-[#181b1e] border-t-2" />
+
+                <div className="mb-2">
+                  <h2 className="my-2 text-[#818187] font-bold mb-2">SORT BY</h2>
+                   <div className="border border-[#1f2126] rounded-lg px-4 py-2 bg-[#15181b] text-[#f5f6f7]">
+                    <select name="" id="">
+                      <option value="recent-added">Recent Added</option>
+                    </select>
+                   </div>
+                </div>
+
+                <hr className="my-2 text-[#181b1e] border-t-2" />
+                <div>
+                  <h2>FILTER BY</h2>
+                  <div>
+                    <select name="" id="">
+                      <option value="">All Geners</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select name="" id="">
+                      <option value="">All Years</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div>
+                  <FavoriteBorderIcon/>
+                  <h2>Love EthioMovie?</h2>
+                  <p>Rate us and Help us and improve your expriance.</p>
+
+                  <div>
+                    <button>Rate Now</button>
+                  </div>
+              </div>
+            </div>
 
             <div>
-              <h4 className="text-[#b6b1b6] text-lg pb-4 font-semibold">
-                Showing {itemOffset + 1}–{Math.min(endOffset, movies.length)} of{" "}
-                {movies.length} Movies.
-              </h4>
-
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {currentMovies.map((movie, index) => (
                   <div
