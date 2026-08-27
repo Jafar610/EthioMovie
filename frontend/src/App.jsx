@@ -8,6 +8,7 @@ import Login from "./Pages/Login/Login";
 import MoviePage from "./Pages/MoviePage/MoviePage";
 import Layout from "./Components/Layout/Layout";
 import Series from "./Pages/Series/Series";
+import Mylist from "./Pages/Mylist/Mylist";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/series" element={<Series/>} />
             <Route path="/movie" element={<MoviePage />} />
+            <Route path="/mylist" element={<Mylist/>} />
             <Route path="/login" element={<Login/>} />
           </Route>
         </Routes>

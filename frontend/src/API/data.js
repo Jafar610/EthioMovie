@@ -1,11 +1,11 @@
 const movies = [
   {
-    title: "Avengers",
+    title: "ለዉለታሽ",
     image: "https://i.ytimg.com/vi/zWtj_OlILIc/maxresdefault.jpg",
     description: "Earth's mightiest heroes must come together...",
   },
   {
-    title: "Batman",
+    title: "ህጋዊ ድሃ",
     image: "https://www.addisgo.com/kana/social-thumb.php?vid=17081435b",
     description: "A dark knight rises to protect Gotham...",
   },
@@ -15,22 +15,22 @@ const movies = [
     description: "Earth's mightiest heroes must come together...",
   },
   {
-    title: "Batman",
+    title: "ህጋዊ ድሃ",
     image: "https://www.addisgo.com/kana/social-thumb.php?vid=17081435b",
     description: "A dark knight rises to protect Gotham...",
   },
   {
-    title: "Avengers",
+    title: "ለዉለታሽ",
     image: "https://i.ytimg.com/vi/zWtj_OlILIc/maxresdefault.jpg",
     description: "Earth's mightiest heroes must come together...",
   },
   {
-    title: "Batman",
+    title: "ህጋዊ ድሃ",
     image: "https://www.addisgo.com/kana/social-thumb.php?vid=17081435b",
     description: "A dark knight rises to protect Gotham...",
   },
   {
-    title: "Avengers",
+    title: "ለዉለታሽ",
     image: "https://i.ytimg.com/vi/zWtj_OlILIc/maxresdefault.jpg",
     description: "Earth's mightiest heroes must come together...",
   },
