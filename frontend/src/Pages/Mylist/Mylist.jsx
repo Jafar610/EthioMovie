@@ -32,7 +32,7 @@ function Mylist() {
 
           <div className="py-2 flex  gap-10">
             <div className="min-w-60 h-auto  ">
-              <div className="border rounded-lg px-6 py-4">
+              <div className="border border-[#1d2024] rounded-lg px-6 py-4">
                 <div className="flex justify-between items-center py-2">
                   <div className="flex gap-2">
                     <BookmarkIcon/>
@@ -69,30 +69,29 @@ function Mylist() {
                 </div>
 
                 <hr className="my-2 text-[#181b1e] border-t-2" />
-                <div>
-                  <h2>FILTER BY</h2>
-                  <div>
-                    <select name="" id="">
+                <div className="mb-2">
+                  <h2 className="my-2 text-[#818187] font-bold mb-2">FILTER BY</h2>
+                  <div className="border border-[#1f2126] rounded-lg px-4 py-2 bg-[#15181b] text-[#f5f6f7] mb-4">
+                    <select name="" id="" className="">
                       <option value="">All Geners</option>
                     </select>
                   </div>
-                  <div>
+                  <div className="border border-[#1f2126] rounded-lg px-4 py-2 bg-[#15181b] text-[#f5f6f7]">
                     <select name="" id="">
                       <option value="">All Years</option>
                     </select>
                   </div>
                 </div>
-
               </div>
 
 
-              <div>
-                  <FavoriteBorderIcon/>
-                  <h2>Love EthioMovie?</h2>
-                  <p>Rate us and Help us and improve your expriance.</p>
+              <div className="bg-[#0c0d0b] mt-4 border border-[#161616] rounded-lg p-4 text-[#f7bd01] flex flex-col items-center">
+                  <FavoriteBorderIcon fontSize={'large'}/>
+                  <h2 className="text-lg text-[#f5f4f4] py-2">Love EthioMovie?</h2>
+                  <p className="text-sm text-[#f5f4f4] text-center pb-2">Rate us and Help us and improve your expriance.</p>
 
-                  <div>
-                    <button>Rate Now</button>
+                  <div className="border border-[#3c2d0c] rounded-lg px-4 py-2">
+                    <button className="font-bold">Rate Now</button>
                   </div>
               </div>
             </div>
