@@ -6,7 +6,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import AppsIcon from '@mui/icons-material/Apps';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-
+import DeleteIcon from '@mui/icons-material/Delete';
 const ReactPaginate = RP.default ?? RP;
 
 function Mylist() {
@@ -97,7 +97,7 @@ function Mylist() {
             </div>
 
             <div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 relative">
                 {currentMovies.map((movie, index) => (
                   <div
                     key={movie.id ?? index}
@@ -126,11 +126,10 @@ function Mylist() {
                           <p>{movie.rating || "4.5"}</p>
                         </div>
                       </div>
-                      <div className="py-2">
-                        <p className="text-sm font-bold text-[#ecad2a]">
-                          S1.E4
-                        </p>
-                      </div>
+
+                    </div>
+                    <div className = "absolute top-0 right-0 border border-[#ffff] rounded-full bg-[#1c1b1d]">
+                      <DeleteIcon/>
                     </div>
                   </div>
                 ))}
